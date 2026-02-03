@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 27-29 - Đèn kéo quân</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f4f4f4;
+    }
+    .carousel {
+      width: 300px;
+      margin: 50px auto;
+    }
+    .carousel img {
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container text-center">
+  <h1 class="mt-4">🎡 Đèn kéo quân (Bài 27 - 29)</h1>
+  <p>Rê chuột vào ảnh → dừng | Rời chuột → quay tiếp</p>
+
+  <div id="denkeoquan" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="images/1.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="images/2.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="images/3.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="images/4.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="images/5.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="images/6.jpg" class="d-block w-100">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const carousel = document.querySelector('#denkeoquan');
+
+  carousel.addEventListener('mouseenter', () => {
+    bootstrap.Carousel.getInstance(carousel).pause();
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    bootstrap.Carousel.getInstance(carousel).cycle();
+  });
+</script>
+
+</body>
+</html>
